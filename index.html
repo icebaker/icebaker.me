@@ -8,19 +8,180 @@
 
     <link rel="icon" href="favicon.gif" type="image/gif" />
 
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/bootstrap-icons.css" rel="stylesheet">
+    <link href="vendor/bootstrap/bootstrap-nightfall.min.css" rel="stylesheet">
+
     <link href="style.css" rel="stylesheet">
+
+    <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
   </head>
   <body>
     <div class="icebaker">
-      <div class="profile">
-        <div class="profile-picture">
-          <img src="profile.gif">
-        </div>
+      <div class="container">
+        <header class="profile" aria-label="icebaker profile">
+          <h1 class="profile-picture">
+            <img
+              src="profile.gif" 
+              alt="icebaker profile picture: a cyberpunk girl, with an explosion of color"
+              aria-label="icebaker profile picture: a cyberpunk girl, with an explosion of color">
+          </h1>
+
+          <div class="input-group address">
+            <span class="input-group-text">GPG</span>
+            <input type="text" class="form-control"
+              aria-label="GPG Key ID"
+              value="D46F09911B18B611"
+              readonly>
+            <button
+              data-bs-toggle="tooltip" data-bs-title="copy to clipboard"
+              aria-label="copy gpg key id to clipboard"
+              data-clipboard-text="D46F09911B18B611"
+              class="btn btn-outline-secondary copyable" type="button">
+              <i class="bi bi-clipboard"></i>
+            </button>
+          </div>
+        </header>
+        
+        <section class="adresses lightning" aria-label="lightning node">
+          <h2>Lightning Node</h2>
+          <div class="input-group address">
+            <span class="input-group-text">Alias</span>
+            <input type="text" class="form-control"
+              aria-label="lightning node alias"
+              value="icebaker/old-stone"
+              readonly>
+            <button
+              data-bs-toggle="tooltip" data-bs-title="copy to clipboard"
+              aria-label="copy lightning node alias to clipboard"
+              data-clipboard-text="icebaker/old-stone"
+              class="btn btn-outline-secondary copyable" type="button">
+              <i class="bi bi-clipboard"></i>
+            </button>
+            <a class="btn btn-outline-secondary"
+              data-bs-toggle="tooltip" data-bs-title="explore on 1ml.com"
+              aria-label="explore lightning node on 1ml.com"
+              href="https://1ml.com/node/02d3c80335a8ccb2ed364c06875f32240f36f7edb37d80f8dbe321b4c364b6e997"
+              target="_blank">
+              <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+            <a class="btn btn-outline-secondary"
+              data-bs-toggle="tooltip" data-bs-title="explore on amboss.space"
+              aria-label="explore lightning node on amboss.space"
+              href="https://amboss.space/node/02d3c80335a8ccb2ed364c06875f32240f36f7edb37d80f8dbe321b4c364b6e997"
+              target="_blank">
+              <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+          </div>
+
+          <div class="input-group address">
+            <span class="input-group-text">Public Key</span>
+            <input type="text" class="form-control"
+              aria-label="lightning node public key"
+              value="02d3c80335a8ccb2ed364c06875f32240f36f7edb37d80f8dbe321b4c364b6e997"
+              readonly>
+            <button
+              data-bs-toggle="tooltip" data-bs-title="copy to clipboard"
+              aria-label="copy lightning node public key to clipboard"
+              data-clipboard-text="02d3c80335a8ccb2ed364c06875f32240f36f7edb37d80f8dbe321b4c364b6e997"
+              class="btn btn-outline-secondary copyable" type="button">
+              <i class="bi bi-clipboard"></i>
+            </button>
+          </div>
+
+          <div class="input-group address">
+            <span class="input-group-text">Tor Address</span>
+            <input type="text" class="form-control"
+              aria-label="lightning node tor address"
+              value="02d3c80335a8ccb2ed364c06875f32240f36f7edb37d80f8dbe321b4c364b6e997@aimftoch7kjf5zwsdgihhivosbkv2mnavottd2lrtz5pqbkfe37scwad.onion:9735"
+              readonly>
+            <button
+              data-bs-toggle="tooltip" data-bs-title="copy to clipboard"
+              aria-label="copy lightning node tor address to clipboard"
+              data-clipboard-text="02d3c80335a8ccb2ed364c06875f32240f36f7edb37d80f8dbe321b4c364b6e997@aimftoch7kjf5zwsdgihhivosbkv2mnavottd2lrtz5pqbkfe37scwad.onion:9735"
+              class="btn btn-outline-secondary copyable" type="button">
+              <i class="bi bi-clipboard"></i>
+            </button>
+          </div>
+        </section>
+
+        <section class="adresses wallets" aria-label="wallets">
+          <h2>Wallets</h2>
+
+          <div class="input-group address">
+            <span class="input-group-text">Bitcoin</span>
+            <input type="text" class="form-control"
+              aria-label="bitcoin wallet address"
+              value="bc1q9aspes7sdlf20x0djjk4xmpwapvkmtkc79me2v"
+              readonly>
+            <button
+              data-bs-toggle="tooltip" data-bs-title="copy to clipboard"
+              aria-label="copy bitcoin wallet address to clipboard"
+              data-clipboard-text="bc1q9aspes7sdlf20x0djjk4xmpwapvkmtkc79me2v"
+              class="btn btn-outline-secondary copyable" type="button">
+              <i class="bi bi-clipboard"></i>
+            </button>
+            <a class="btn btn-outline-secondary"
+              data-bs-toggle="tooltip" data-bs-title="explore on mempool.space"
+              aria-label="explore bitcoin wallet on mempool.space"
+              href="https://mempool.space/address/bc1q9aspes7sdlf20x0djjk4xmpwapvkmtkc79me2v"
+              target="_blank">
+              <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+          </div>
+
+          <div class="input-group address">
+            <span class="input-group-text">Ethereum</span>
+            <input type="text" class="form-control"
+              aria-label="ethereum wallet address"
+              value="0xD196607E6b650FA13005C337e56C5dB3dE5bF2ef"
+              readonly>
+            <button
+              data-bs-toggle="tooltip" data-bs-title="copy to clipboard"
+              aria-label="copy ethereum wallet address to clipboard"
+              data-clipboard-text="0xD196607E6b650FA13005C337e56C5dB3dE5bF2ef"
+              class="btn btn-outline-secondary copyable" type="button">
+              <i class="bi bi-clipboard"></i>
+            </button>
+            <a class="btn btn-outline-secondary"
+              data-bs-toggle="tooltip" data-bs-title="explore on etherscan.io"
+              aria-label="explore ethereum wallet on etherscan.io"
+              href="https://etherscan.io/address/0xD196607E6b650FA13005C337e56C5dB3dE5bF2ef"
+              target="_blank">
+              <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+          </div>
+
+          <div class="input-group address">
+            <span class="input-group-text">Arweave</span>
+            <input type="text" class="form-control"
+              aria-label="arweave wallet address"
+              value="bok8RlyeGS3worVMfdFYmsFO6n2EQ4yFpiZG_fkHclQ"
+              readonly>
+            <button
+              data-bs-toggle="tooltip" data-bs-title="copy to clipboard"
+              aria-label="copy arweave wallet address to clipboard"
+              data-clipboard-text="bok8RlyeGS3worVMfdFYmsFO6n2EQ4yFpiZG_fkHclQ"
+              class="btn btn-outline-secondary copyable" type="button">
+              <i class="bi bi-clipboard"></i>
+            </button>
+            <a class="btn btn-outline-secondary"
+              data-bs-toggle="tooltip" data-bs-title="explore on viewblock.io"
+              aria-label="explore arweave wallet on viewblock.io"
+              href="https://viewblock.io/arweave/address/bok8RlyeGS3worVMfdFYmsFO6n2EQ4yFpiZG_fkHclQ"
+              target="_blank">
+              <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+          </div>
+        </section>
+        
+        <footer aria-label="a famous quote">
+          <p>Nearly everything is really interesting if you go into it deeply enough.</p>
+        </footer>
       </div>
-     
-      <code class="account">
-        0xdc7193149599F6dA362B7993D7c0A072C8dbf3C4
-      </code>
     </div>
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendor/clipboard/clipboard.min.js"></script>
+    <script src="boot.js"></script>
   </body>
 </html>
